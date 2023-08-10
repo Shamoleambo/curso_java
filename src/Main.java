@@ -1,18 +1,28 @@
-import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World!");
+		String name;
+		int age;
+		double moneyInTheBank;
+		char gender;
+		Scanner sc = new Scanner(System.in);
 
-		double floatVariable = (double) 233 / 4;
-		String name = "Mano";
+		System.out.println("What is your name?");
+		name = sc.next();
+		System.out.println("What is your age?");
+		age = sc.nextInt();
+		System.out.println("How much money do you have in your bank account?");
+		moneyInTheBank = sc.nextDouble();
+		System.out.println("What is your gender?(M/F)");
+		gender = sc.next().charAt(0);
 
-		System.out.printf("%.4f%n", floatVariable);
-		Locale.setDefault(Locale.US);
-		System.out.printf("%.4f%n", floatVariable);
-
-		System.out.printf("%s has %.2f dollars%n", name, floatVariable);
+		System.out.printf("%nYour name is %s%n", name);
+		System.out.printf("You are %d years old%n", age);
+		System.out.printf("You have R$ %.2f saved in your bank account%n", moneyInTheBank);
+		System.out.printf("And your gender is %s", gender);
+		sc.close();
 
 	}
 
