@@ -4,19 +4,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		int number;
-		String text1, text2, text3;
-
+		
 		Scanner sc = new Scanner(System.in);
-
-		System.out.println("Provide a number and three strings");
+		
+		System.out.println("Provide an integer number: ");
 		number = sc.nextInt();
-		sc.nextLine();
-		text1 = sc.nextLine();
-		text2 = sc.nextLine();
-		text3 = sc.nextLine();
-
-		System.out.printf("%n%d %n%s %n%s %n%s", number, text1, text2, text3);
-
+		
+		if(number < 0 ) {
+			System.out.printf("%d is your number, and is SMALLER than 0", number);
+		}else if(number > 0){
+			System.out.printf("%d is your number, and is BIGGER than 0", number);
+		} else {
+			System.out.println("Your number IS 0");
+		}
+		
 		sc.close();
 	}
 
