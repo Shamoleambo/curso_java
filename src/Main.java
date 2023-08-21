@@ -1,22 +1,34 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		int sum = 0;
-		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("How many times do you want to provide a number for the sum?");
-		int dataCollectionRounds = sc.nextInt();
+		System.out.println("What's the array size?");
+		int arraySize = sc.nextInt();
 		
-		for(int n=1; n <= dataCollectionRounds; n++) {
-			sum += sc.nextInt();
+		double[] heightArray = new double[arraySize];
+		
+		for(int i = 0; i<arraySize; i++) {
+			heightArray[i] = sc.nextDouble();
 		}
 		
-		System.out.printf("SUM = %d", sum);
+		System.out.println(average(heightArray));
 		
 		sc.close();
+	}
+	
+	public static double average(double[] array) {
+		int arraySize = array.length;
+		double sum = 0;
+		for(int i=0; i<arraySize; i++) {
+			sum += array[i];
+		}
+		
+		return sum/arraySize;
 	}
 
 }
