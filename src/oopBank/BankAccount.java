@@ -19,7 +19,7 @@ public class BankAccount {
 
 	public void deposit(double amount) {
 		this.balance += amount;
-		System.out.printf(this.toString());
+		System.out.println(this.toString());
 	}
 
 	public void withdraw(double amount) {
