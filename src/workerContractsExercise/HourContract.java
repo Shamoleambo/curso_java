@@ -1,6 +1,7 @@
 package workerContractsExercise;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class HourContract {
 	private LocalDate date;
@@ -8,12 +9,16 @@ public class HourContract {
 	private Integer hours;
 	
 	public HourContract(String date, Double valuePerHour, Integer hours) {
-		this.date = LocalDate.parse(date);
+		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		this.date = LocalDate.parse(date, fmt1);
 		this.valuePerHour = valuePerHour;
 		this.hours = hours;
 	}
 	
 	public Double totalValue() {
 		return this.valuePerHour * this.hours;
+	}
+	public LocalDate getDate() {
+		return this.date;
 	}
 }
