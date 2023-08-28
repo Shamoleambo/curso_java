@@ -1,13 +1,24 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		Account acc1 = new BusinessAccount("Mano", 1234, 1000.00, 10000.00);
-		Account acc2 = new SavingsAccount("Truta", 1235, 1000.0, 0.01);
+		Scanner sc = new Scanner(System.in);
 
-		acc1.withdraw(100.0);
-		acc2.withdraw(100.0);
-		System.out.println(acc1.getBalance());
-		System.out.println(acc2.getBalance());
+		try {
+			String[] vect = sc.nextLine().split(" ");
+			Integer postition = sc.nextInt();
+
+			System.out.println(vect[postition]);
+		} catch (InputMismatchException e) {
+			System.out.println("Invalid input for position, it must be an Integer!");
+		} catch (ArrayIndexOutOfBoundsException e) {
+			System.out.println("Position out of array range!");
+		}
+
+		System.out.println("Program end");
+		sc.close();
 	}
 
 }
