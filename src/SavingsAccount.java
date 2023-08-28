@@ -16,7 +16,7 @@ public final class SavingsAccount extends Account {
 	}
 
 	@Override
-	public void withdraw(Double amount) {
+	public final void withdraw(Double amount) {
 		super.withdraw(amount);
 		this.balance -= 10;
 	}
