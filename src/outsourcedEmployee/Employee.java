@@ -17,6 +17,10 @@ public class Employee {
 		return valuePerHour * hours;
 	}
 	
+	public String toString() {
+		return this.name + "$ " + this.payment();
+	}
+	
 	public String getName() {
 		return name;
 	}
