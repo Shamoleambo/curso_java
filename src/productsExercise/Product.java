@@ -13,7 +13,7 @@ public class Product {
 	
 	public String priceTag() {
 		Formatter fmt = new Formatter();
-		String priceTag = "$ " + fmt.format("%.2f", this.getPrice());
+		String priceTag = this.getName() + " $ " + fmt.format("%.2f", this.getPrice());
 		fmt.close();
 		return priceTag;
 	}

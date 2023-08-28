@@ -17,7 +17,7 @@ public class UsedProduct extends Product {
 		Formatter fmtDouble = new Formatter();
 		DateTimeFormatter fmtDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		String date = fmtDate.format(this.getDate());
-		String priceTag = "$ " + fmtDouble.format("%.2f", this.getPrice()) + "(Manufacture date: " + date + ")";
+		String priceTag = this.getName() + " (used) " + "$ " + fmtDouble.format("%.2f", this.getPrice()) + "(Manufacture date: " + date + ")";
 		fmtDouble.close();
 		return priceTag;
 	}

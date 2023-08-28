@@ -12,10 +12,17 @@ public class ImportedProduct extends Product{
 	
 	@Override
 	public final String priceTag() {
-		Formatter fmt = new Formatter();
+		Formatter fmtFullPrice = new Formatter();
+		Formatter fmtCustoms = new Formatter();
 		Double fullPrice = this.getPrice() + this.getCustomsFee();
-		String priceTag = "$ " + fmt.format("%.2f", fullPrice) + "(Customs fee: $ " + fmt.format("%.2f", this.getCustomsFee()) + ")";
-		fmt.close();
+		Formatter fullPriceFormatted = fmtFullPrice.format("%.2f", fullPrice); 
+		String customsInfo = " (Customs fee: $ " + fmtCustoms.format("%.2f", this.getCustomsFee()) + ")";
+		
+		String priceTag = this.getName() + " $ " + fullPriceFormatted +  customsInfo;
+		
+		fmtCustoms.close();
+		fmtFullPrice.close();
+		
 		return priceTag;
 	}
 	
