@@ -11,7 +11,7 @@ public class ImportedProduct extends Product{
 	}
 	
 	@Override
-	public String priceTag() {
+	public final String priceTag() {
 		Formatter fmt = new Formatter();
 		Double fullPrice = this.getPrice() + this.getCustomsFee();
 		String priceTag = "$ " + fmt.format("%.2f", fullPrice) + "(Customs fee: $ " + fmt.format("%.2f", this.getCustomsFee()) + ")";
