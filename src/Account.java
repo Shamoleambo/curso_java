@@ -1,7 +1,11 @@
 public class Account {
 	private String holder;
-	private final Integer ID;
+	private Integer ID;
 	protected Double balance;
+
+	public Account() {
+
+	}
 
 	public Account(String holder, Integer id, Double initialDeposit) {
 		this.holder = holder;
