@@ -2,6 +2,7 @@ package defaultInterfaceInterest.application;
 
 import java.util.Scanner;
 
+import defaultInterfaceInterest.services.BrazilInterestService;
 import defaultInterfaceInterest.services.UsInterestService;
 
 public class Program {
@@ -19,7 +20,9 @@ public class Program {
 		sc.close();
 		
 		UsInterestService usInterestService = new UsInterestService();
-		System.out.printf("$ %.2f", usInterestService.calculateInterest(amount, months));
+		BrazilInterestService brInterestService = new BrazilInterestService();
+		System.out.printf("$ %.2f%n", usInterestService.calculateInterest(amount, months));
+		System.out.printf("R$ %.2f%n", brInterestService.calculateInterest(amount, months));
 	}
 
 }
