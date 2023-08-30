@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+import contractInterface.entities.Contract;
+import contractInterface.services.ContractService;
+import contractInterface.services.PaypalService;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -27,6 +31,9 @@ public class Program {
 		sc.nextLine();
 		
 		sc.close();
+		
+		ContractService contractService = new ContractService(new PaypalService());
+		contractService.processContract(new Contract(contractNumber, date, totalAmount), months);
 
 	}
 

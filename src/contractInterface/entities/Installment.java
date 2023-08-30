@@ -1,8 +1,10 @@
 package contractInterface.entities;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Installment {
+	DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 	private LocalDate dueDate;
 	private Double amount;
 	
@@ -11,8 +13,8 @@ public class Installment {
 		this.amount = amount;
 	}
 
-	public LocalDate getDueDate() {
-		return dueDate;
+	public String getDueDate() {
+		return this.dueDate.format(fmt);
 	}
 
 	public Double getAmount() {
