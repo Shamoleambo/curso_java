@@ -7,7 +7,7 @@ import contractInterface.entities.Installment;
 
 public class ContractService {
 	
-	OnlinePaymentService onlinePaymentService;
+	private OnlinePaymentService onlinePaymentService;
 	
 	public ContractService(OnlinePaymentService onlinePaymentService) {
 		this.onlinePaymentService = onlinePaymentService;
