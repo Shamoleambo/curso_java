@@ -1,6 +1,6 @@
 package defaultInterfaceInterest.services;
 
-public class BrazilInterestService {
+public class BrazilInterestService implements InterestService {
 	private final Double INTEREST_RATE = 2.0;
 
 	public Double calculateInterest(Double amount, Integer months) {
