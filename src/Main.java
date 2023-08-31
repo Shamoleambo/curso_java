@@ -10,6 +10,7 @@ public class Main {
 		hashSet.add("Truta");
 		hashSet.add("Mano");
 		hashSet.add("Tiu");
+		hashSet.add("Eita");
 		System.out.println(hashSet.contains("Mano"));
 		System.out.println(hashSet.contains("Maria"));
 		for(String name: hashSet) {
@@ -17,24 +18,9 @@ public class Main {
 		}
 		
 		System.out.println();
-		Set<String> treehashSet = new TreeSet<>();
-		treehashSet.add("Truta");
-		treehashSet.add("Mano");
-		treehashSet.add("Tiu");
-		System.out.println(treehashSet.contains("Mano"));
-		System.out.println(treehashSet.contains("Maria"));
-		for(String name: treehashSet) {
-			System.out.println(name);
-		}
-		
-		System.out.println();
-		Set<String> lnkhasSet = new LinkedHashSet<>();
-		lnkhasSet.add("Mano");
-		lnkhasSet.add("Tiu");
-		lnkhasSet.add("Truta");
-		System.out.println(lnkhasSet.contains("Mano"));
-		System.out.println(lnkhasSet.contains("Maria"));
-		for(String name: lnkhasSet) {
+		hashSet.remove("Mano");
+		hashSet.removeIf(name -> name.charAt(0) == 'T');
+		for(String name: hashSet) {
 			System.out.println(name);
 		}
 	}
