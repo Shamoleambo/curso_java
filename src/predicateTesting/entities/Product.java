@@ -1,3 +1,4 @@
+package predicateTesting.entities;
 
 public class Product {
 	private String name;
