@@ -21,11 +21,11 @@ public class Program {
 //		products.forEach(Product::priceUpdate);
 //		products.forEach(Product::priceUpdateNonStatic);
 
-		Consumer<Product> cons = prod -> {
-			prod.setPrice(prod.getPrice() * 1.1);
-		};
+//		Consumer<Product> cons = prod -> {
+//			prod.setPrice(prod.getPrice() * 1.1);
+//		};
 
-		products.forEach(cons);
+		products.forEach(product -> product.setPrice(product.getPrice() * 1.1));
 
 		for (Product product : products) {
 			System.out.println(product);
