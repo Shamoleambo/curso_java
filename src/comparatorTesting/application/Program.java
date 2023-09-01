@@ -1,7 +1,6 @@
 package comparatorTesting.application;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 import comparatorTesting.entities.Product;
@@ -16,10 +15,7 @@ public class Program {
 		products.add(new Product("Notebook", 1200.00));
 		products.add(new Product("Tablet", 450.00));
 
-		Comparator<Product> comp = (product1, product2) -> product1.getName().toUpperCase()
-				.compareTo(product2.getName().toUpperCase());
-
-		products.sort(comp);
+		products.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
 		for (Product product : products) {
 			System.out.println(product);
