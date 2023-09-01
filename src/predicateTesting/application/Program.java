@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import predicateTesting.entities.Product;
-import predicateTesting.utils.ProductPredicate;
 
 public class Program {
 
@@ -17,7 +16,7 @@ public class Program {
 		products.add(new Product("Tablet", 80.9));
 		products.add(new Product("Notebook", 1000.0));
 
-		products.removeIf(new ProductPredicate());
+		products.removeIf(Product::staticProductPredicate);
 
 		for (Product product : products) {
 			System.out.println(product);
