@@ -1,33 +1,22 @@
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Map<String, String> cookies = new TreeMap<>();
+		List<Product> products = new ArrayList<>();
+
+		products.add(new Product("TV", 900.0));
+		products.add(new Product("Mouse", 50.));
+		products.add(new Product("Table", 350.5));
+		products.add(new Product("Tablet", 80.9));
+		products.add(new Product("Notebook", 1000.0));
+
+		products.removeIf(prod -> prod.getPrice() >= 100.00);
 		
-		cookies.put("username", "Mano");
-		cookies.put("email", "mano@mail.com");
-		cookies.put("phone", "11999988888");
-		
-		cookies.remove("email");
-		cookies.put("phone", "11987654674");
-		
-		for(String key: cookies.keySet()) {
-			System.out.println(key + " : " + cookies.get(key));
+		for(Product product: products) {
+			System.out.println(product);
 		}
-		
-		System.out.println();
-		System.out.println(cookies.containsKey("phone"));
-		System.out.println(cookies.containsKey("email"));
-		
-		System.out.println();
-		System.out.println(cookies.get("phone"));
-		
-		System.out.println();
-		System.out.println(cookies.get("email"));
-		
-		System.out.println();
-		System.out.println(cookies.size());
+
 	}
 }
