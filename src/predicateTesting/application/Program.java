@@ -2,7 +2,6 @@ package predicateTesting.application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 import predicateTesting.entities.Product;
 
@@ -17,9 +16,7 @@ public class Program {
 		products.add(new Product("Tablet", 80.9));
 		products.add(new Product("Notebook", 1000.0));
 		
-		Predicate<Product> pred = prod -> prod.getPrice() >= 100;
-
-		products.removeIf(pred);
+		products.removeIf(prod -> prod.getPrice() >= 100);
 
 		for (Product product : products) {
 			System.out.println(product);
