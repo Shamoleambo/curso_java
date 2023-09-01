@@ -12,7 +12,11 @@ public class Product {
 	public static void priceUpdate(Product p) {
 		p.setPrice(p.getPrice() * 1.1);
 	}
-	
+
+	public void priceUpdateNonStatic() {
+		this.setPrice(this.price * 1.1);
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -33,7 +37,5 @@ public class Product {
 	public String toString() {
 		return "Product [name=" + name + ", price=" + price + "]";
 	}
-	
-	
 
 }

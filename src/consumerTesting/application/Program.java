@@ -17,7 +17,8 @@ public class Program {
 		products.add(new Product("Notebook", 1000.0));
 		//product -> product.setPrice(product.getPrice() * 1.1)
 //		products.forEach(new PriceUpdate());
-		products.forEach(Product::priceUpdate);
+//		products.forEach(Product::priceUpdate);
+//		products.forEach(Product::priceUpdateNonStatic);
 		
 		for(Product product: products) {
 			System.out.println(product);
