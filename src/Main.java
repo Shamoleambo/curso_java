@@ -1,24 +1,33 @@
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Set<Integer> a = new TreeSet<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
-		Set<Integer> b = new TreeSet<>(Arrays.asList(2, 4, 6, 7, 9, 11, 23));
+		Map<String, String> cookies = new TreeMap<>();
 		
-		Set<Integer> c = new TreeSet<>(a);
-		c.addAll(b);
-		System.out.println(c);
+		cookies.put("username", "Mano");
+		cookies.put("email", "mano@mail.com");
+		cookies.put("phone", "11999988888");
 		
-		Set<Integer> d = new TreeSet<>(a);
-		d.removeAll(b);
-		System.out.println(d);
+		cookies.remove("email");
+		cookies.put("phone", "11987654674");
 		
-		Set<Integer> e = new TreeSet<>(a);
-		e.retainAll(b);
-		System.out.println(e);
+		for(String key: cookies.keySet()) {
+			System.out.println(key + " : " + cookies.get(key));
+		}
+		
+		System.out.println();
+		System.out.println(cookies.containsKey("phone"));
+		System.out.println(cookies.containsKey("email"));
+		
+		System.out.println();
+		System.out.println(cookies.get("phone"));
+		
+		System.out.println();
+		System.out.println(cookies.get("email"));
+		
+		System.out.println();
+		System.out.println(cookies.size());
 	}
 }
