@@ -18,7 +18,7 @@ public class Program {
 		products.add(new Product("Smartphone", 4000.0));
 		products.add(new Product("Tablet", 2400.0));
 		
-		List<String> names = products.stream().map(new UpperCaseName()).collect(Collectors.toList());
+		List<String> names = products.stream().map(Product::toUpperCaseNameStatic).collect(Collectors.toList());
 		names.forEach(System.out::println);
 		
 	}
