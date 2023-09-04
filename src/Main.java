@@ -10,6 +10,9 @@ public class Main {
 
 		Stream<Integer> st1 = list.stream().map(num -> num * 10);
 		System.out.println(Arrays.toString(st1.toArray()));
+		
+		Stream<String> st2 = Stream.of("Mano", "Tiu", "Truta");
+		System.out.println(Arrays.toString(st2.toArray()));
 
 	}
 }
