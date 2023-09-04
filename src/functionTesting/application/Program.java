@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import functionTesting.entities.Product;
-import functionTesting.utils.UpperCaseName;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 		products.add(new Product("Smartphone", 4000.0));
 		products.add(new Product("Tablet", 2400.0));
 		
-		List<String> names = products.stream().map(Product::toUpperCaseNameStatic).collect(Collectors.toList());
+		List<String> names = products.stream().map(Product::toUpperCaseName).collect(Collectors.toList());
 		names.forEach(System.out::println);
 		
 	}
