@@ -17,7 +17,7 @@ public class Program {
 		Employee employee = new Employee(name, grossSalary, tax);
 		System.out.println(employee.toString());
 
-		System.out.print("Which percentage to increase salary? ");''
+		System.out.print("Which percentage to increase salary? ");
 		double percentage = sc.nextDouble();
 		employee.increaseSalary(percentage);
 
