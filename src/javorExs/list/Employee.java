@@ -31,4 +31,8 @@ public class Employee {
 	public Double getSalary() {
 		return this.salary;
 	}
+	
+	public String toString() {
+		return "ID: " + this.id + "; Name: " + this.name + "; Salary: $ " + this.salary;
+	}
 }
