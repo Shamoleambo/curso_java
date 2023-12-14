@@ -1,4 +1,4 @@
-package javoR;
+package javoR.list;
 
 import java.util.ArrayList;
 import java.util.List;
