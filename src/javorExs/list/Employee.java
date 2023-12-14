@@ -1,5 +1,7 @@
 package javorExs.list;
 
+import java.util.Objects;
+
 public class Employee {
 	private Integer id;
 	private String name;
@@ -31,7 +33,7 @@ public class Employee {
 	public Double getSalary() {
 		return this.salary;
 	}
-	
+
 	public String toString() {
 		return "ID: " + this.id + "; Name: " + this.name + "; Salary: $ " + this.salary;
 	}
