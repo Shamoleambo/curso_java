@@ -1,32 +1,27 @@
 package javoR.dates4;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Program {
 
 	public static void main(String[] args) {
 		
 
-		LocalDate d01 = LocalDate.parse("2023-12-18");
-		LocalDate pastDay = d01.minusDays(1);
-		LocalDate nextDay = d01.plusDays(1);
-		LocalDate pastWeek = d01.minusWeeks(1);
-		LocalDate nextWeek = d01.plusWeeks(1);
-		LocalDate pastMonth = d01.plusMonths(1);
-		LocalDate nextMonth = d01.minusMonths(1);
-		LocalDate pastYear = d01.minusYears(1);
-		LocalDate nextYear = d01.plusYears(1);
+		LocalDateTime d01 = LocalDateTime.parse("2023-12-18T00:33:22");
+		LocalDateTime pastSecond = d01.minusSeconds(23);
+		LocalDateTime nextSecond = d01.plusSeconds(40);
+		LocalDateTime pastMinute = d01.minusMinutes(1);
+		LocalDateTime nextMinute = d01.plusMinutes(1);
+		LocalDateTime pastHour = d01.minusHours(1);
+		LocalDateTime nextHour = d01.plusHours(1);
 
-		System.out.println("pastDay " + pastDay);
-		System.out.println("nextDay " + nextDay);
-		System.out.println("pastWeek " + pastWeek);
-		System.out.println("nextWeek " + nextWeek);
-		System.out.println("pastMonth " + pastMonth);
-		System.out.println("nextMonth " + nextMonth);
-		System.out.println("pastYear " + pastYear);
-		System.out.println("nextYear " + nextYear);
+		System.out.println("pastSecond " + pastSecond);
+		System.out.println("nextSecond " + nextSecond);
+		System.out.println("pastMinute " + pastMinute);
+		System.out.println("nextMinute " + nextMinute);
+		System.out.println("pastHour " + pastHour);
+		System.out.println("nextHour " + nextHour);
 
-		
 	}
 
 }
