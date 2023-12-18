@@ -3,6 +3,7 @@ package javoR.dates;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Program {
 
@@ -23,6 +24,15 @@ public class Program {
 
 		Instant d06 = Instant.parse("2023-12-18T11:00:00-03:00");
 		System.out.println("d06 = " + d06);
+
+		// Custom time
+		DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate d07 = LocalDate.parse("18/12/2023", fmt1);
+		System.out.println("d07 = " + d07);
+		DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SS");
+		LocalDateTime d08 = LocalDateTime.parse("18/12/2023 07:33:01.99", fmt2);
+		System.out.println("d08 = " + d08);
+
 	}
 
 }
