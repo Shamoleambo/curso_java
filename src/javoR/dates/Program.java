@@ -33,6 +33,13 @@ public class Program {
 		LocalDateTime d08 = LocalDateTime.parse("18/12/2023 07:33:01.99", fmt2);
 		System.out.println("d08 = " + d08);
 
+		// Year, month, day, time
+		LocalDate d09 = LocalDate.of(2023, 12, 18);
+		System.out.println("d09 = " + d09);
+		LocalDateTime d10 = LocalDateTime.of(2023, 12, 18, 11, 22);
+		System.out.println("d10 = " + d10);
+		LocalDateTime d11 = LocalDateTime.of(2023, 12, 18, 11, 22, 53);
+		System.out.println("d11 = " + d11);
 	}
 
 }
