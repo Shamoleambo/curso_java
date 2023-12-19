@@ -1,6 +1,6 @@
 package javoR.exercisePoli.entities;
 
-import workerContractsExercise.Department;
+import javoR.exercisePoli.entities.enums.Department;
 
 public class Employee {
 	private String name;
@@ -8,11 +8,11 @@ public class Employee {
 	private Double valuePerHour;
 	private Department department;
 
-	public Employee(String name, Integer hours, Double valuePerHour, Department department) {
+	public Employee(String name, Integer hours, Double valuePerHour, Department management) {
 		this.name = name;
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
-		this.department = department;
+		this.department = management;
 	}
 
 	public Double payment() {
@@ -49,6 +49,10 @@ public class Employee {
 
 	public void setDepartment(Department department) {
 		this.department = department;
+	}
+
+	public String toString() {
+		return this.name + " - $ " + payment();
 	}
 
 }

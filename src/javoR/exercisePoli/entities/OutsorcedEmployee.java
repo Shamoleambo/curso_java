@@ -1,6 +1,6 @@
 package javoR.exercisePoli.entities;
 
-import workerContractsExercise.Department;
+import javoR.exercisePoli.entities.enums.Department;
 
 public class OutsorcedEmployee extends Employee {
 	public Double additionalCharge;
