@@ -1,14 +1,18 @@
 package javoR.exercisePoli.entities;
 
+import workerContractsExercise.Department;
+
 public class Employee {
 	private String name;
 	private Integer hours;
 	private Double valuePerHour;
+	private Department department;
 
-	public Employee(String name, Integer hours, Double valuePerHour) {
+	public Employee(String name, Integer hours, Double valuePerHour, Department department) {
 		this.name = name;
 		this.hours = hours;
 		this.valuePerHour = valuePerHour;
+		this.department = department;
 	}
 
 	public Double payment() {
@@ -37,6 +41,14 @@ public class Employee {
 
 	public void setValuePerHour(Double valuePerHour) {
 		this.valuePerHour = valuePerHour;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 }
