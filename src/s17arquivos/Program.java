@@ -1,25 +1,25 @@
 package s17arquivos;
 
-import java.io.File;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) {
-		File file = new File("C:\\Users\\tidgo\\Documentos\\test.txt");
-		Scanner sc = null;
-		try {
-			sc = new Scanner(file);
-			while (sc.hasNextLine())
-				System.out.println(sc.nextLine());
-		} catch (IOException e) {
-			System.out.println("Error: " + e.getMessage());
-		} finally {
-			if (sc != null)
-				sc.close();
-		}
 
+		String[] lines = new String[] { "Hi", "Hello", "Oi" };
+		
+		String path = "C:\\Users\\tidgo\\Documentos\\out.txt";
+		
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
+			for(String line: lines) {
+				bw.write(line);
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
