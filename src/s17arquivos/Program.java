@@ -1,25 +1,31 @@
 package s17arquivos;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.File;
+import java.util.Scanner;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		String[] lines = new String[] { "Hi", "Hello", "Oi" };
-		
-		String path = "C:\\Users\\tidgo\\Documentos\\out.txt";
-		
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path, true))){
-			for(String line: lines) {
-				bw.write(line);
-				bw.newLine();
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter a folder path: ");
+		String strPath = sc.nextLine();
+
+		File path = new File(strPath);
+
+		File[] folders = path.listFiles(File::isDirectory);
+		System.out.println("Folders: ");
+		for (File folder : folders)
+			System.out.println(folder);
+
+		System.out.println();
+		File[] files = path.listFiles(File::isFile);
+		System.out.println("Files: ");
+		for (File file : files)
+			System.out.println(file);
+
+		sc.close();
 	}
 
 }
