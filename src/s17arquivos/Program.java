@@ -25,6 +25,10 @@ public class Program {
 		for (File file : files)
 			System.out.println(file);
 
+		System.out.println();
+		boolean success = new File(strPath + "\\subdir").mkdir();
+		System.out.println("Pasta criada");
+
 		sc.close();
 	}
 
