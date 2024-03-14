@@ -18,8 +18,7 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		ProductPredicate pp = new ProductPredicate();
-		products.removeIf(pp::test);
+		products.removeIf(new ProductPredicate());
 		products.forEach(System.out::println);
 	}
 
