@@ -14,6 +14,10 @@ public class Product {
 		p.setPrice(p.getPrice() * 1.1);
 	}
 
+	public void nonStaticProductConsumer() {
+		this.setPrice(this.price * 1.1);
+	}
+
 	public String getName() {
 		return name;
 	}
