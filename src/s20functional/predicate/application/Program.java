@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import s20functional.predicate.entities.Product;
+import s20functional.util.ProductPredicate;
 
 public class Program {
 
@@ -17,7 +18,8 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		products.removeIf(p -> p.getPrice() < 1000.0);
+		ProductPredicate pp = new ProductPredicate();
+		products.removeIf(pp::test);
 		products.forEach(System.out::println);
 	}
 
