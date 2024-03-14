@@ -3,8 +3,7 @@ package s20functional.function.application;
 import java.util.ArrayList;
 import java.util.List;
 
-import s20functional.consumer.entities.Product;
-import s20functional.function.util.ProductFunction;
+import s20functional.function.entities.Product;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		List<String> names = products.stream().map(new ProductFunction()).toList();
+		List<String> names = products.stream().map(Product::staticProductFunction).toList();
 		names.forEach(System.out::println);
 
 	}

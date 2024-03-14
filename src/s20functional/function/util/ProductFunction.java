@@ -2,7 +2,7 @@ package s20functional.function.util;
 
 import java.util.function.Function;
 
-import s20functional.consumer.entities.Product;
+import s20functional.function.entities.Product;
 
 public class ProductFunction implements Function<Product, String> {
 
