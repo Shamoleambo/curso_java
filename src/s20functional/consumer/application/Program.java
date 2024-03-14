@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import s20functional.consumer.entities.Product;
-import s20functional.consumer.util.ProductConsumer;
 
 public class Program {
 
@@ -18,7 +17,7 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		products.forEach(new ProductConsumer());
+		products.forEach(Product::productConsumer);
 		products.forEach(System.out::println);
 
 	}

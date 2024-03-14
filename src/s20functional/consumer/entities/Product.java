@@ -10,6 +10,10 @@ public class Product {
 		this.price = price;
 	}
 
+	public static void productConsumer(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
+	}
+
 	public String getName() {
 		return name;
 	}
