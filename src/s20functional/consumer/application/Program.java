@@ -17,7 +17,7 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		products.forEach(Product::nonStaticProductConsumer);
+		products.forEach(p -> p.setPrice(p.getPrice() * 1.1));
 		products.forEach(System.out::println);
 
 	}
