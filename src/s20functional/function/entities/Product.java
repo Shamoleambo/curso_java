@@ -13,6 +13,10 @@ public class Product {
 	public static String staticProductFunction(Product p) {
 		return p.getName().toUpperCase();
 	}
+	
+	public String nonStaticProductFunction() {
+		return this.name.toUpperCase();
+	}
 
 	public String getName() {
 		return name;

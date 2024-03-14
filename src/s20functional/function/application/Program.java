@@ -17,7 +17,7 @@ public class Program {
 		products.add(new Product("TV", 1500.0));
 		products.add(new Product("Smart Phone", 3400.0));
 
-		List<String> names = products.stream().map(Product::staticProductFunction).toList();
+		List<String> names = products.stream().map(Product::nonStaticProductFunction).toList();
 		names.forEach(System.out::println);
 
 	}
