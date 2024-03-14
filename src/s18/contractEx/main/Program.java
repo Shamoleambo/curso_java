@@ -4,6 +4,10 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
+import s18.contractEx.domain.Contract;
+import s18.contractEx.service.ContractService;
+import s18.contractEx.service.PaypalService;
+
 public class Program {
 
 	public static void main(String[] args) {
@@ -21,6 +25,12 @@ public class Program {
 		Double contractValue = sc.nextDouble();
 		System.out.print("Número de parcelas: ");
 		Integer installments = sc.nextInt();
+
+		Contract contract = new Contract(contractNumber, contractDate, contractValue);
+		ContractService cs = new ContractService(new PaypalService());
+		cs.processContract(contract, installments);
+
+		System.out.println(contract.toString());
 
 		sc.close();
 
