@@ -15,4 +15,9 @@ public class Installment {
 		this.amount = amount;
 	}
 
+	@Override
+	public String toString() {
+		return this.dueDate + " payment: $" + this.amount;
+	}
+
 }
